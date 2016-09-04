@@ -4,3 +4,5 @@
 * Latest jessie backport openssl
 * Gettext installed for Django translations
 * Latest stable nginx with port 80 and 443 exposed
+* libev-dev installed
+* bjoern wsgi server installed
