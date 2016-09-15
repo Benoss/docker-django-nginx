@@ -8,7 +8,8 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
 	&& apt-get update \
 	&& apt-get install -y -t jessie-backports openssl libssl-dev \
 	&& apt-get install -y ca-certificates nginx gettext-base \
-  && apt-get install -y libev-dev \
+        && apt-get install -y libev-dev \
+        && apt-get apt-get install python-dev libmysqlclient-dev
 	&& rm -rf /var/lib/apt/lists/*
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
