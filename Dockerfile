@@ -17,4 +17,5 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 EXPOSE 80 443
 # Finished setting up Nginx
 RUN rm /etc/nginx/conf.d/default.conf
-RUN pip install bjoern
+
+RUN python --version && nginx --version 
