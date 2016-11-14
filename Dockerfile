@@ -18,4 +18,4 @@ EXPOSE 80 443
 # Finished setting up Nginx
 RUN rm /etc/nginx/conf.d/default.conf
 
-RUN python --version && nginx -v 
+RUN python --version && nginx -v && pip --version
