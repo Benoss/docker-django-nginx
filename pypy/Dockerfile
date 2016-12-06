@@ -2,6 +2,8 @@ FROM pypy:2
 
 MAINTAINER Benoit Chabord <>
 
+RUN rm /usr/local/bin/python && ln -s /usr/local/bin/pypy /usr/local/bin/python
+
 RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 \
 	&& echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list \
 	&& echo "deb http://ftp.debian.org/debian jessie-backports main " >> /etc/apt/sources.list.d/backports.list \
